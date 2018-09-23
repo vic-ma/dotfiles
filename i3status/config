@@ -1,0 +1,65 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        interval = 5
+        colors = true
+}
+
+order += "wireless _first_"
+order += "battery all"
+order += "battery 1"
+order += "battery 0"
+order += "volume master"
+order += "tztime date"
+order += "tztime time"
+
+wireless _first_ {
+        format_up = "UP"
+        format_down = "DN"
+}
+
+battery all {
+        format = "%status:"
+        low_threshold = 10
+        threshold_type = "percentage"
+        status_chr = "CHR"
+        status_full= "FUL"
+        status_bat = "BAT"
+        separator = false
+        separator_block_width = 0
+}
+
+battery 1 {
+        format =  "[%percentage|"
+        integer_battery_capacity = true
+        last_full_capacity = true
+        separator = false
+        separator_block_width = 0
+}
+
+battery 0 {
+        format = "%percentage]"
+        integer_battery_capacity = true
+        last_full_capacity = true
+}
+
+
+tztime date {
+        format = "%a %m-%d-%y" 
+}
+
+tztime time {
+        format = "%I:%M %p"
+}
+
+volume master {
+        device = "pulse"
+        format = "V:%volume"
+        format_muted = "MUTED"
+}

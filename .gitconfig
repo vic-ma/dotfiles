@@ -1,0 +1,16 @@
+[user]
+	name = Victor Ma
+	email = vic.ma@mail.utoronto.ca
+[alias]
+    ad = add
+    st = status
+    ct = commit
+    ps = push
+    pl = pull
+    ft = fetch
+    mg = merge
+    df = diff
+    lg = log --oneline
+    lgraph = log --graph --all --oneline
+[core]
+	excludesfile = /home/victor/.gitignore_global
