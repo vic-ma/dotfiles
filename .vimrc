@@ -1,7 +1,7 @@
 syntax enable
 
 colorscheme solarized "set colorscheme
-call togglebg#map("<F5>") "enable solarized light/dark toggle
+call togglebg#map("<F12>") "enable solarized light/dark toggle
 set bg=light "set solarized light
 set guifont=Inconsolata\ 16 "set gvim font
 
@@ -35,3 +35,29 @@ set wildmode=longest,list "bash style tab completion
 set wildignorecase "ignore case for  tab completion
 
 set showcmd "show incomplete command compositions
+
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o "disable autocomment
+
+"Ctags
+set tags=./tags;$HOME/Projects
+
+"vim-smooth-scroll
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 10, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 10, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 10, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 10, 4)<CR>
+
+"Java compilation
+map <F1> :w<Enter>:!javac *.java<Enter><Enter>:!java %:r<Enter>
+
+"C compilation
+map <F2> :w<Enter>:!gcc -Wall -g *.c<Enter><Enter>:!./a.out<Enter>
+
+"LaTeX compilation
+map <F5> :w<Enter>:!pdflatex *.tex<Enter><Enter>
+
+"Clear terminal
+map <F9> :!rm a.out<Enter><Enter>:!clear<Enter><Enter>
+
+autocmd FileType c setlocal ts=2 sts=2 sw=2 cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
+

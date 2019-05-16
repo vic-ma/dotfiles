@@ -4,13 +4,18 @@
 [alias]
     ad = add
     st = status
-    ct = commit
+    df = diff
+    ct = commit -s
+    lg = log --oneline
+    lgraph = log --graph --all --oneline
     ps = push
     pl = pull
     ft = fetch
     mg = merge
-    df = diff
-    lg = log --oneline
-    lgraph = log --graph --all --oneline
+    br = branch --all
+    rt = remote
+    co = checkout
+    ma = master
+    rb = rebase
 [core]
 	excludesfile = /home/victor/.gitignore_global
