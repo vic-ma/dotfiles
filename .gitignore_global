@@ -1,2 +1,7 @@
 *.sw?
 *.class
+*.gch
+a.out
+ctags
+build/
+cbuild/
