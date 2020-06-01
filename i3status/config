@@ -29,6 +29,7 @@ battery all {
         low_threshold = 10
         threshold_type = "percentage"
         status_chr = "CHR"
+        status_unk = "CHR"
         status_full= "FUL"
         status_bat = "BAT"
         separator = false

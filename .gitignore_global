@@ -2,6 +2,6 @@
 *.class
 *.gch
 a.out
-ctags
-build/
-cbuild/
+tags
+AUTOMAKE_BUILD/
+CMAKE_BUILD/

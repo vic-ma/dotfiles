@@ -23,6 +23,8 @@ set notimeout "never time out mappings
 set ttimeout
 nnoremap q: <Nop>
 nnoremap p ]p
+nnoremap tg gt
+nnoremap Tg gT
 
 set ignorecase "ignore case while searching
 set smartcase "ignore ignorecase if pattern contians a capital
@@ -38,8 +40,8 @@ set showcmd "show incomplete command compositions
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o "disable autocomment
 
-"Ctags
-set tags=./tags;$HOME/Projects
+"Don't show swap file warnings
+set shortmess+=A
 
 "vim-smooth-scroll
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 10, 2)<CR>
@@ -48,10 +50,13 @@ noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 10, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 10, 4)<CR>
 
 "Java compilation
-map <F1> :w<Enter>:!javac *.java<Enter><Enter>:!java %:r<Enter>
+map <F1> :w<Enter>:!javac -Xlint *.java<Enter><Enter>:!java %:r<Enter>
 
 "C compilation
 map <F2> :w<Enter>:!gcc -Wall -g *.c<Enter><Enter>:!./a.out<Enter>
+
+"Python compilation
+map <F3> :w<Enter>:!python3 *.py<Enter>
 
 "LaTeX compilation
 map <F5> :w<Enter>:!pdflatex *.tex<Enter><Enter>
@@ -60,4 +65,4 @@ map <F5> :w<Enter>:!pdflatex *.tex<Enter><Enter>
 map <F9> :!rm a.out<Enter><Enter>:!clear<Enter><Enter>
 
 autocmd FileType c setlocal ts=2 sts=2 sw=2 cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
-
+set tags=./tags,tags;$HOME

@@ -1,3 +1,5 @@
+for_window [class="Paint"] floating enable, resize set 500 500
+
 # font
 set $font Terminus
 

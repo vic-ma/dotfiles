@@ -116,11 +116,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-set -o vi
-
 # aliases
 alias sd='shutdown now'
 alias cl='clear'
+alias rs='reset'
 alias ud='sudo apt update'
 alias ug='sudo apt upgrade'
 alias ar='sudo apt autoremove'
@@ -129,10 +128,20 @@ alias ex='exit'
 alias py='python3.6'
 alias wttr='curl wttr.in/Mississauga'
 alias dirs='dirs -v'
+alias grep='grep -i'
+alias find='find . -name'
 alias help='help -m'
 alias nm='sudo systemctl restart NetworkManager'
 alias gcc='gcc -Wall -g'
 alias cslinux='ssh mavicto5@cslinux.utm.utoronto.ca'
 alias p='cd ..'
+alias sn='sensors'
 alias slg='cd ~/Projects/syslog-ng'
 alias mod='cd ~/Projects/syslog-ng/modules'
+alias exp='cd ~/Projects/syslog-ng/modules/examples'
+alias stf='cd ~/Projects/syslog-ng/modules/examples/sources/static-file'
+alias op='cd ~/Projects/syslog-ng/modules/examples/parsers/ordered-parser'
+alias fil='cd ~/Projects/syslog-ng/modules/examples/filters/filter-length'
+alias tf='cd ~/Projects/syslog-ng/modules/examples/templates/radix-funcs'
+alias gb='cd ~/Projects/syslog-ng-gitbook/chapters/chapter_7'
+alias lf='cd ~/Projects/syslog-ng/lib/filter'
