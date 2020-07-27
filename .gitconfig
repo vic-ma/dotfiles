@@ -1,13 +1,18 @@
 [user]
 	name = Victor Ma
-	email = vic.ma@mail.utoronto.ca
+	email = vma@redhat.com
 [alias]
     ad = add
     st = status
     df = diff
     dfc = diff --check
-    ct = commit -s
+    ct = commit
+    cta = commit -a
+    ctm = commit -m
+    ctam = commit --amend
+    logall = log --all
     lg = log --oneline
+    lgall = log --oneline --all
     lgraph = log --graph --oneline
     lgraphall = log --graph --all --oneline
     ps = push
@@ -15,11 +20,13 @@
     ft = fetch
     mg = merge
     br = branch
+    bra = branch --all
     brall = branch --all
     rt = remote
-    rs = reset
     co = checkout
     ma = master
     rb = rebase
+    rs = restore
+    rss = restore --staged
 [core]
-	excludesfile = /home/victor/.gitignore_global
+	excludesfile = /home/vma/.gitignore_global

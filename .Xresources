@@ -36,3 +36,9 @@ URxvt.iso14755: false
 *color13:               #6c71c4
 *color14:               #93a1a1
 *color15:               #fdf6e3
+
+!clipboard functionality
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.Control-Meta-c: builtin-string:
+URxvt.keysym.Control-Meta-v: builtin-string:

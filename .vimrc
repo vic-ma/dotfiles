@@ -1,9 +1,8 @@
 syntax enable
 
+set nocompatible
 colorscheme solarized "set colorscheme
-call togglebg#map("<F12>") "enable solarized light/dark toggle
 set bg=light "set solarized light
-set guifont=Inconsolata\ 16 "set gvim font
 
 set relativenumber "show line numbers as relative line numbers
 set number "show current line as absolute line number
@@ -21,7 +20,7 @@ set ttimeoutlen=0 "don't wait after <Esc>
 
 set notimeout "never time out mappings
 set ttimeout
-nnoremap q: <Nop>
+nnoremap q: :q
 nnoremap p ]p
 nnoremap tg gt
 nnoremap Tg gT
@@ -29,6 +28,7 @@ nnoremap Tg gT
 set ignorecase "ignore case while searching
 set smartcase "ignore ignorecase if pattern contians a capital
 set incsearch "search while entering pattern
+set nohlsearch "don't highlight all
 
 set nowrap "disable word wrap
 set sidescroll=1 "minimum number of columns to scroll
@@ -43,12 +43,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o "
 "Don't show swap file warnings
 set shortmess+=A
 
-"vim-smooth-scroll
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 10, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 10, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 10, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 10, 4)<CR>
-
 "Java compilation
 map <F1> :w<Enter>:!javac -Xlint *.java<Enter><Enter>:!java %:r<Enter>
 
@@ -61,8 +55,17 @@ map <F3> :w<Enter>:!python3 *.py<Enter>
 "LaTeX compilation
 map <F5> :w<Enter>:!pdflatex *.tex<Enter><Enter>
 
-"Clear terminal
-map <F9> :!rm a.out<Enter><Enter>:!clear<Enter><Enter>
+"Run Ctags
+map <F9> :!ctags -f $HOME/container-jfr/src/tags -R $HOME/container-jfr/src<Enter><Enter>
 
-autocmd FileType c setlocal ts=2 sts=2 sw=2 cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
-set tags=./tags,tags;$HOME
+"Smooth scroll
+noremap <silent> <c-u> :call smooth_scroll#up(          &scroll,    5,  1)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(        &scroll,    5,  1)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(          &scroll*2,  3,  1)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(        &scroll*2,  3,  1)<CR>
+
+"Set tags location
+set tags=$HOME/container-jfr/tags,$HOME/container-jfr-core/tags,./tags;$HOME
+
+"Set auto change directory
+set autochdir
