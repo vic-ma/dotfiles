@@ -3,30 +3,44 @@
 	email = vma@redhat.com
 [alias]
     ad = add
+    ada = add --all
     st = status
     df = diff
     dfc = diff --check
+    dfh = diff HEAD
     ct = commit
     cta = commit -a
     ctm = commit -m
     ctam = commit --amend
-    logall = log --all
+    loga = log --all
     lg = log --oneline
+    lga = log --oneline --all
     lgall = log --oneline --all
     lgraph = log --graph --oneline
     lgraphall = log --graph --all --oneline
     ps = push
+    psf = push --force
     pl = pull
+    pup = pull upstream main
     ft = fetch
+    fta = fetch --all
+    fp = fetch --prune
     mg = merge
     br = branch
+    brd = branch --delete
     bra = branch --all
     brall = branch --all
     rt = remote
+    rtv = remote -v
     co = checkout
+    cob = checkout -b
     ma = master
     rb = rebase
-    rs = restore
-    rss = restore --staged
+    rsh = reset --hard
+    cl = clean -f
 [core]
 	excludesfile = /home/vma/.gitignore_global
+[fetch]
+	prune = true
+[advice]
+	detachedHead = false
