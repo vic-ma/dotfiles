@@ -12,6 +12,7 @@
     cta = commit -a
     ctm = commit -m
     ctam = commit --amend
+    ctaam = commit -a --amend
     loga = log --all
     lg = log --oneline
     lga = log --oneline --all

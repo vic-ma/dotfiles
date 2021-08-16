@@ -14,6 +14,10 @@ set shiftwidth=4 "spaces per visual shift
 set expandtab "tabs are spaces
 filetype plugin indent on "filetype specific settings
 
+" set textwidth=100 "set maximum line length 
+" autocmd FileType text setlocal formatoptions+=a
+" autocmd FileType text setlocal textwidth=80
+
 set hidden "don't unload buffers when abandoned
 set lazyredraw "don't redraw during macros
 set ttimeoutlen=0 "don't wait after <Esc>
@@ -56,7 +60,12 @@ map <F3> :w<Enter>:!python3 *.py<Enter>
 map <F5> :w<Enter>:!pdflatex *.tex<Enter><Enter>
 
 "Run Ctags
-map <F9> :!ctags -f $HOME/container-jfr/src/tags -R $HOME/container-jfr/src<Enter><Enter>
+map <F8> :!ctags -f $HOME/jfr-tests/tags -R $HOME/jfr-tests/src<Enter><Enter>
+map <F9> :!ctags -f $HOME/container-jfr/tags -R $HOME/container-jfr/src && ctags -f $HOME/aazores-cjfr/tags -R $HOME/aazores-cjfr/src && ctags -f $HOME/upstream-cjfr/tags -R $HOME/upstream-cjfr/src && ctags -f $HOME/container-jfr-core/tags -R $HOME/container-jfr-core/src<Enter><Enter>
+map <F10> :!ctags -f $HOME/graal/tags -R $HOME/graal/* && ctags -f $HOME/upstream-graal/tags -R $HOME/upstream-graal/* <Enter><Enter>
+
+"Clear
+map <F12> :!clear<Enter><Enter>
 
 "Smooth scroll
 noremap <silent> <c-u> :call smooth_scroll#up(          &scroll,    5,  1)<CR>
@@ -65,7 +74,7 @@ noremap <silent> <c-b> :call smooth_scroll#up(          &scroll*2,  3,  1)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(        &scroll*2,  3,  1)<CR>
 
 "Set tags location
-set tags=$HOME/container-jfr/tags,$HOME/container-jfr-core/tags,./tags;$HOME
+set tags=./tags;$HOME,$HOME/graal/tags,$HOME/jdk/src/jdk.jfr/share/classes/jdk/jfr/tags,$HOME/container-jfr-core/tags
 
 "Set auto change directory
 set autochdir
