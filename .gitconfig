@@ -1,6 +1,6 @@
 [user]
 	name = Victor Ma
-	email = vic.ma@mail.utoronto.ca
+	email = victorma649@gmail.com
 [alias]
     ad = add
     ada = add --all
@@ -17,8 +17,8 @@
     lg = log --oneline
     lga = log --oneline --all
     lgall = log --oneline --all
-    lgraph = log --graph --oneline
-    lgraphall = log --graph --all --oneline
+    lgr = log --graph --oneline
+    lgrall = log --graph --all --oneline
     ps = push
     psf = push --force
     pl = pull
@@ -37,11 +37,14 @@
     cob = checkout -b
     ma = master
     rb = rebase
+    rs = reset
     rsh = reset --hard
     cl = clean -f
-[core]
-	excludesfile = /home/vma/.gitignore_global
+    dh = diff HEAD~1
 [fetch]
 	prune = true
 [advice]
 	detachedHead = false
+[core]
+	editor = vim
+	excludesfile = /home/victor/.gitignore
