@@ -35,11 +35,13 @@
     rt     = remote
     rtv    = remote -v
     co     = checkout
+    cop    = checkout -
     cob    = checkout -b
     ma     = master
     rb     = rebase
     rbi    = rebase -i
-    rbm    = rebase -i master
+    rbm    = rebase master
+    rbim   = rebase -i master
     rs     = reset
     rsh    = reset --hard
     cl     = clean -f
@@ -51,12 +53,15 @@
     bs     = bisect start
     bb     = bisect bad
     bg     = bisect good
+    bl     = blame -s
 [fetch]
     prune = true
 [advice]
     detachedHead = false
+[push]
+    autoSetupRemote = true
+[pager]
+    branch = false
 [core]
     editor = vim
     excludesfile = /home/victor/.gitignore
-[push]
-    autoSetupRemote = true
