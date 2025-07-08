@@ -30,4 +30,6 @@ set relativenumber        " Use relative number on other lines
 
 syntax on                 " Enable syntax highlighting
 
-set tags=./tags;,tags
+set tags=./tags;,tags     " Set tags locations
+
+nmap Y y$
