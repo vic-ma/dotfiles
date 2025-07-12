@@ -1,7 +1,0 @@
-*.sw?
-*.class
-*.gch
-a.out
-tags
-AUTOMAKE_BUILD/
-CMAKE_BUILD/
