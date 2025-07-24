@@ -33,6 +33,7 @@
     bra    = branch --all
     brall  = branch --all
     rt     = remote
+    rta    = remote add
     rtv    = remote -v
     co     = checkout
     cop    = checkout -

@@ -1,3 +1,5 @@
+syntax on                 " Enable syntax highlight
+
 " time out on key codes
 set notimeout
 set ttimeout
@@ -27,8 +29,6 @@ set showcmd               " show incomplete command compositions
 
 set number                " Use absolute number on current line
 set relativenumber        " Use relative number on other lines
-
-syntax on                 " Enable syntax highlighting
 
 set tags=./tags;,tags     " Set tags locations
 

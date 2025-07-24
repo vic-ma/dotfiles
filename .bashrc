@@ -112,9 +112,16 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
+##########
+# CUSTOM #
+##########
+
 eval "$(fzf --bash)"
 
-if [[ -x "$(command -v zypper)" ]]; then
+if [[ -x "$(command -v fastfetch)" ]]; then
+  PS1='\[\e]0;📄\u@box: \w\a\]\[\033[01;32m\]📄\u@box\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+elif [[ -x "$(command -v zypper)" ]]; then
   PS1='\[\e]0;📦\u@box: \w\a\]\[\033[01;32m\]📦\u@box\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
   PS1=$PS1
