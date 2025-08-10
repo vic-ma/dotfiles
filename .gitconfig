@@ -38,16 +38,28 @@
     co     = checkout
     cop    = checkout -
     cob    = checkout -b
+    co1    = co HEAD~1
+    co2    = co HEAD~2
+    co3    = co HEAD~3
+    co4    = co HEAD~4
+    co5    = co HEAD~5
     ma     = master
     rb     = rebase
     rbi    = rebase -i
     rbm    = rebase master
+    s      = stash
+    sl     = stash list
+    sp     = stash pop
     rbim   = rebase -i master
     rs     = reset
     rsh    = reset --hard
     cl     = clean -f
     cfd    = clean -fd
     df1    = diff HEAD~1
+    df2    = diff HEAD~2
+    df3    = diff HEAD~3
+    df4    = diff HEAD~4
+    df5    = diff HEAD~5
     plu    = pull upstream master
     dfm    = diff master
     brm    = branch --move
@@ -55,6 +67,7 @@
     bb     = bisect bad
     bg     = bisect good
     bl     = blame -s
+    brs    = bisect reset
 [fetch]
     prune = true
 [advice]

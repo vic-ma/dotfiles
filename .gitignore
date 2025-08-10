@@ -8,3 +8,4 @@ foo
 temp
 backup
 [a-z]
+autobuild-devel-docs.sh
