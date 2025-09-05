@@ -9,12 +9,12 @@
     bl              = blame -s
     br              = branch
     bra             = branch --all
-    brd             = branch --delete
+    brd             = branch -D
     brm             = branch --move
     brs             = bisect reset
     bs              = bisect start
     cfd             = clean -fd
-    cl              = clean -f
+    cf              = clean -f
     co              = checkout
     cob             = checkout -b
     coh             = co HEAD
@@ -67,7 +67,7 @@
     rt              = remote
     rta             = remote add
     rtv             = remote -v
-    s               = stash
+    s               = show
     sh              = show HEAD
     sh1             = show HEAD~1
     sh2             = show HEAD~2
