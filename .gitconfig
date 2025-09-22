@@ -13,8 +13,9 @@
     brm             = branch --move
     brs             = bisect reset
     bs              = bisect start
-    cfd             = clean -fd
-    cf              = clean -f
+    cl              = clean
+    clf             = clean -f
+    clfd            = clean -fd
     co              = checkout
     cob             = checkout -b
     coh             = co HEAD
@@ -41,6 +42,7 @@
     dfh5            = diff HEAD~5
     dfho            = diff HEAD @{u}
     dfm             = diff master
+    dfmm            = diff master...
     dfo             = diff @{u}
     dfs             = diff --cached
     fp              = fetch --prune
@@ -68,6 +70,7 @@
     rta             = remote add
     rtv             = remote -v
     s               = show
+    sc              = stash clear
     sh              = show HEAD
     sh1             = show HEAD~1
     sh2             = show HEAD~2

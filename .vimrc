@@ -14,18 +14,20 @@ set expandtab             " Use spaces instead of tabs
 set shiftwidth=4          " Indent size
 set softtabstop=4         " Tab key feels like 4 spaces
 
-set ignorecase            " ignore case while searching
-set smartcase             " ignore ignorecase if pattern contians a capital
-set incsearch             " search while entering pattern
-set nohlsearch            " don't highlight all
+set ignorecase            " Ignore case while searching
+set smartcase             " Ignore ignorecase if pattern contians a capital
+set incsearch             " Search while entering pattern
+set nohlsearch            " Don't highlight all
 
-set nowrap                " disable word wrap
-set sidescroll=1          " minimum number of columns to scroll
+set nowrap                " Disable word wrap
+set sidescroll=1          " Minimum number of columns to scroll
 
-set wildmode=longest,list " bash style tab completion
-set wildignorecase        " ignore case for  tab completion
+set scrolloff=5           " Enable dead zone
 
-set showcmd               " show incomplete command compositions
+set wildmode=longest,list " Bash style tab completion
+set wildignorecase        " Ignore case for  tab completion
+
+set showcmd               " Show incomplete command compositions
 
 set number                " Use absolute number on current line
 set relativenumber        " Use relative number on other lines
